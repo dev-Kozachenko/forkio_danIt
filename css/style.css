@@ -954,22 +954,42 @@ input {
   color: #fff;
   background-color: rgba(255, 255, 255, 0.11);
 }
+@media (max-width: 768px) {
+  .pricing-card {
+    width: 250px;
+  }
+}
 @media (max-width: 576px) {
   .pricing-card {
     width: 210px;
+  }
+}
+@media (max-width: 480px) {
+  .pricing-card {
+    width: 257px;
   }
 }
 .pricing-card--active {
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
-  width: 299px;
+  width: 300px;
   height: 560px;
   background-color: rgba(70, 48, 72, 0.84);
+}
+@media (max-width: 768px) {
+  .pricing-card--active {
+    width: 270px;
+  }
 }
 @media (max-width: 576px) {
   .pricing-card--active {
     width: 230px;
+  }
+}
+@media (max-width: 480px) {
+  .pricing-card--active {
+    width: 300px;
   }
 }
 .pricing-card__heading {
