@@ -1,0 +1,115 @@
+.pricing {
+    padding-top: 115px;
+    padding-bottom: 73px;
+    @include bgCover('../img/pricing/pricing_bg.png');
+
+    @media(max-width: $LG) {
+        padding-top: 70px;
+    }
+}
+
+.pricing-list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    margin-top: 60px;
+
+    @media(max-width: $LG) {
+        margin-top: 30px;
+        flex-wrap: wrap;
+        gap: 25px;
+    }
+
+    @media(max-width: $MD) {
+        margin-top: 30px;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+}
+
+.pricing-card {
+    position: relative;
+    width: 257px;
+    height: 457px;
+    padding-bottom: 37px;
+    text-align: center;
+    color: $color-white;
+    background-color: rgba($color: $color-white, $alpha: 0.11);
+
+    @media(max-width: $SM) {
+        width: 210px;
+    }
+
+    &--active {
+        align-self: center;
+        width: 299px;
+        height: 560px;
+        background-color: rgba($color: #463048, $alpha: 0.84);
+
+        @media(max-width: $SM) {
+            width: 230px;
+        }
+    }
+
+    &__heading {
+        padding-top: 34px;
+        padding-bottom: 34px;
+        font-size: 24px;
+        font-weight: 400;
+        text-transform: uppercase;
+        background-color: rgba($color: $color-white, $alpha: 0.06);
+
+        &--active {
+            background-color: rgba($color: #000, $alpha: 0.11);
+        }
+    }
+
+    &__price {
+        margin-top: 20px;
+        font-size: 60px;
+
+        &--active {
+            margin-top: 4px;
+            font-size: 82px;
+        }
+        
+        &--bold {
+            font-weight: 700;
+        }
+    }
+
+    &__term {
+        margin-top: 10px;
+        font-size: 14px;
+        text-transform: uppercase;
+    }
+
+    &__conditions {
+        position: relative;
+        margin-top: 80px;
+        font-size: 16px;
+        line-height: 18px;
+
+      
+        &::before {
+            content: '';
+            position: absolute;
+            width: 60px;
+            height: 5px;
+            background-color: $color-primary-dark;
+            top: -40px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        &--active {
+            margin-top: 100px;
+
+            &::before {
+                top: -50px;
+            }
+        }
+    }
+}
+

@@ -1,0 +1,52 @@
+.github-btn {
+    @include flexCenter;
+    color: #24292f;  
+    border: 1px solid rgba(27, 31, 36, 0.15);
+    border-radius: 6px;
+    font-size: 12px;
+    line-height: 20px;
+
+    &__name {
+        @include flexCenter;
+        gap: 5px;
+        padding: 3px 12px;
+        background-color: #f6f8fa;
+        border-right: 1px solid rgba(27, 31, 36, 0.15);
+        border-radius: 6px 0 0 6px;
+
+        &:hover {
+            background-color: #e6e6e6;
+        }
+    }
+
+    &__value {
+        padding: 0 8px;
+    }
+}
+
+.pricing-btn {
+    position: absolute;
+    bottom: 37px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 12px 36px;
+    font-family: $default-font-name;
+    font-size: 15px;
+    color: $color-white;
+    border-radius: 21px;
+    text-transform: uppercase;
+    cursor: pointer;
+    background-color: rgba($color: $color-white, $alpha: 0.15);
+    border: none;
+
+    &:hover {
+        background-color: rgba($color: $color-white, $alpha: 0.3);
+    }
+
+    &--active {
+        bottom: 47px;
+        font-size: 16px;
+        padding: 16px 48px;
+        border-radius: 26px;
+    }
+}

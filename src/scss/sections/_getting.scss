@@ -1,0 +1,130 @@
+.getting {
+    position: relative;
+    display: flex;
+    overflow: hidden;
+    padding-top: 100px;
+    padding-bottom: 30px;
+    background-color: $color-gray;
+
+    @media(max-width:$LG) {
+       display: block;
+       padding-top: 200px;
+       background-color: $color-white;
+    }
+
+    &__left {
+        flex: 0 0 100%;  
+    }
+
+    &__right {
+        position: relative;
+        margin-bottom: 20px;
+        top: 50px;
+        flex: 0 0 50%;
+        transform: translateX(-100%);
+
+        @media(max-width:$LG) {
+            max-width: $LG_width;
+            margin-left: auto;
+            margin-right: auto;
+            padding-left: 50px;
+            transform: translateX(0);
+        }
+
+        @media(max-width:$SM) {
+            padding-left: 20px;
+        }
+    }
+
+    &__img {
+        top: 0;
+        left: 0;
+        position: absolute;     
+        height: 100%;
+
+        @media(max-width:$LG) {
+           position: relative;
+           width: 100%;
+        }
+    }
+
+    &__content {
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        gap: 33px;
+        padding-right: 50px;
+
+        @media(max-width:$XL) {
+            padding-right: 0;
+        }
+
+        @media(max-width:$LG) {
+            width: 100%;
+        }
+    }
+
+    &__content-img {
+       display: block;
+        min-width: 110px;
+        @include flexCenter;
+
+        @media(max-width: $SM) {
+            margin-bottom: 27px;
+        }
+    }
+
+    &__content-item {
+        display: flex;
+        gap: 23px;
+
+        @media(max-width: $SM) {
+            display: block;
+        }
+    }
+
+    &__content-heading {
+        font-size: $default-font-size;
+        font-weight: 400;
+        color: $color-black;
+        margin-bottom: 16px;
+
+        @media(max-width: $SM) {
+            text-align: center;
+        }
+    }
+
+    &__content-text {
+        font-size: 14px;
+        line-height: $default-line-height;
+        font-weight: 400;
+        color: $color-primary-light;
+
+        @media(max-width: $SM) {
+            text-align: center;
+        }
+    }
+
+    &__heading {
+        position: absolute;
+        top: 90px;
+        left: 50%;
+        text-align: left;
+        padding-left: 20px;
+        width: 100%;
+        color: $color-primary-dark;
+    
+        @media(max-width:$LG) {
+            padding-left: 0;
+            top: 100px;
+            left: 50%;
+            text-align: center;
+            transform: translateX(-50%);
+        }
+
+        @media(max-width: $SM) {
+            top: 70px;
+            width: 300px;
+        }
+    }
+}

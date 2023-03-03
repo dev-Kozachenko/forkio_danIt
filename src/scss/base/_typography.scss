@@ -1,0 +1,18 @@
+.heading {
+    font-size: 48px;
+    font-weight: 700;
+    color: $color-white;
+    text-align: center;
+    
+    @media(max-width: $XL) {
+        font-size: 40px;
+    }
+
+    @media(max-width: $MD) {
+        font-size: 38px;
+    }
+
+    @media(max-width: $SM) {
+        font-size: 32px;
+    }
+}
