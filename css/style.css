@@ -459,6 +459,11 @@ input {
   padding-top: 108px;
   padding-bottom: 5px;
 }
+@media (max-width: 768px) {
+  .testimonialis {
+    padding-top: 90px;
+  }
+}
 
 .testimonialis-list {
   display: -ms-grid;
@@ -575,11 +580,11 @@ input {
     -webkit-box-pack: normal;
         -ms-flex-pack: normal;
             justify-content: normal;
+    position: relative;
   }
 }
 
 .header--background-color {
-  position: relative;
   width: 100%;
 }
 @media (max-width: 992px) {
@@ -674,7 +679,7 @@ input {
     background-color: rgb(51, 51, 51);
     width: 90%;
     position: absolute;
-    top: 276px;
+    top: 278px;
     right: 0;
     display: none;
   }
@@ -744,6 +749,7 @@ input {
   border-radius: 20px;
   background-color: #8D81AC;
   padding: 10px 35px;
+  white-space: nowrap;
 }
 .primary-btn:hover {
   color: #8D81AC;
@@ -753,7 +759,11 @@ input {
 @media (max-width: 480px) {
   .primary-btn__navbar--position {
     position: absolute;
-    left: calc(50% - 48px);
+    top: 54px;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
   }
 }
 
@@ -832,6 +842,7 @@ input {
   position: absolute;
   top: 50%;
   left: 50%;
+  border-radius: 30%;
   -webkit-transform: translate(-50%, -50%);
       -ms-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
@@ -841,7 +852,7 @@ input {
   transition: 0.2s linear;
 }
 .burger-icon__line:nth-of-type(2) {
-  left: 35%;
+  left: 65%;
   top: calc(50% - 5px);
   width: 13px;
 }
@@ -849,6 +860,9 @@ input {
   top: calc(50% + 5px);
 }
 
+.burger-icon__line--active {
+  border-radius: 0%;
+}
 .burger-icon__line--active:nth-of-type(1) {
   display: none;
 }
@@ -867,7 +881,7 @@ input {
           transform: translate(-50%, 0%) rotate(-45deg);
 }
 
-.header-footer {
+.header__bottom-part {
   position: relative;
 }
 
@@ -914,6 +928,11 @@ input {
     padding-top: 70px;
   }
 }
+@media (max-width: 768px) {
+  .pricing {
+    padding-top: 12px;
+  }
+}
 
 .pricing-list {
   display: -webkit-box;
@@ -941,7 +960,10 @@ input {
     margin-top: 30px;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
-    gap: 10px;
+    -webkit-column-gap: 10px;
+       -moz-column-gap: 10px;
+            column-gap: 10px;
+    row-gap: 18px;
   }
 }
 
@@ -979,7 +1001,7 @@ input {
 }
 @media (max-width: 768px) {
   .pricing-card--active {
-    width: 270px;
+    width: 280px;
   }
 }
 @media (max-width: 576px) {
